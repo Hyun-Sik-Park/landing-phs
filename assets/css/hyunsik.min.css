@@ -52,11 +52,11 @@
   color: #555;
 }
 
-#main .swiper-slide {
+#main .sec01 .swiper-slide {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
 }
-#main .first {
+#main .sec01 .first {
   background: url("../image/slide01.jpg") no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -66,7 +66,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-#main .first .title {
+#main .sec01 .first .title {
   font-family: Noto Sans KR;
   font-size: 36px;
   font-style: normal;
@@ -76,7 +76,7 @@
   text-align: left;
   color: #fff;
 }
-#main .first .subTitle {
+#main .sec01 .first .subTitle {
   font-family: Noto Sans KR;
   font-size: 24px;
   font-style: normal;
@@ -86,7 +86,7 @@
   text-align: left;
   color: #fff;
 }
-#main .second {
+#main .sec01 .second {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../image/slide02.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../image/slide02.jpg");
   background-size: cover;
@@ -97,7 +97,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-#main .second .title {
+#main .sec01 .second .title {
   font-family: Noto Sans KR;
   font-size: 72px;
   font-style: normal;
@@ -108,7 +108,7 @@
   color: #fff;
   margin: 0 auto;
 }
-#main .third {
+#main .sec01 .third {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,7 +116,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-#main .third .thumbnail {
+#main .sec01 .third .thumbnail {
   background: url("../image/slide03.png") no-repeat;
   background-size: contain;
   width: 483px;
@@ -125,7 +125,7 @@
       -ms-flex: 1;
           flex: 1;
 }
-#main .third .container {
+#main .sec01 .third .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,13 +133,13 @@
       -ms-flex-align: center;
           align-items: center;
 }
-#main .third .text-wrap {
+#main .sec01 .third .text-wrap {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-left: 30px;
 }
-#main .third .title {
+#main .sec01 .third .title {
   font-family: Noto Sans KR;
   font-size: 36px;
   font-style: normal;
@@ -149,7 +149,7 @@
   text-align: left;
   color: #000;
 }
-#main .third .text {
+#main .sec01 .third .text {
   font-family: Noto Sans KR;
   font-size: 18px;
   font-style: normal;
@@ -157,5 +157,17 @@
   line-height: 34px;
   letter-spacing: 2px;
   text-align: left;
+  color: #000;
+}
+#main .sec02 .sec02-inner {
+  padding: 100px 0 150px 0;
+}
+#main .sec02 .sec02-inner .title {
+  font-family: Noto Sans KR;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 49px;
+  letter-spacing: 10px;
   color: #000;
 }/*# sourceMappingURL=hyunsik.min.css.map */

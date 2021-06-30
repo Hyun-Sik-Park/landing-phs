@@ -14,6 +14,9 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+	</style>
 </head>
 <body>
 	<header id="header" class="a">
@@ -28,32 +31,84 @@
 			</div>
 		</div>
 	</header>
-	<main id="main">
-		<section>
 
-		</section>
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide first" data-header-type="white">
-					<div class="container">
-						<div class="title">Portfolio</div>
-						<div class="subTitle">HTML, JavaScript, SASS 등 Front-end 개발 연습하기 위해 퍼블리싱 했습니다.</div>
+	<main id="main">
+		<div class="sec01">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide first" data-header-type="white">
+						<div class="container">
+							<div class="title">Portfolio</div>
+							<div class="subTitle">HTML, JavaScript, SASS 등 Front-end 개발 연습하기 위해 퍼블리싱 했습니다.</div>
+						</div>
 					</div>
-				</div>
-				<div class="swiper-slide second" data-header-type="light">
-					<div class="title">PROGRAMMING</div>
-				</div>
-				<div class="swiper-slide third" data-header-type="dark">
-					<div class="container">
-						<div class="thumbnail"></div>
-						<div class="text-wrap">
-							<div class="title">Lorem ipsum</div>
-							<div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum fugit dolorum, animi ducimus doloremque quas alias et fuga voluptas minima corrupti eius officiis laudantium praesentium in temporibus quisquam aperiam explicabo.</div>
+					<div class="swiper-slide second" data-header-type="light">
+						<div class="title">PROGRAMMING</div>
+					</div>
+					<div class="swiper-slide third" data-header-type="dark">
+						<div class="container">
+							<div class="thumbnail"></div>
+							<div class="text-wrap">
+								<div class="title">Lorem ipsum</div>
+								<div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum fugit dolorum, animi ducimus doloremque quas alias et fuga voluptas minima corrupti eius officiis laudantium praesentium in temporibus quisquam aperiam explicabo.</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<article class="sec02">
+			<div class="container">
+				<div class="sec02-inner">
+					<h1 class="title">Project</h1>
+
+					<div class="slide-wrap01">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide slide01"></div>
+								<div class="swiper-slide slide02"></div>
+								<div class="swiper-slide slide03"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="slide-wrap02 ">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide slide01"></div>
+								<div class="swiper-slide slide02"></div>
+								<div class="swiper-slide slide03"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</article>
+
+		<article class="sec03">
+			 <div class="container">
+				 <div class="sec03-inner">
+					 <h1 class="title">Team</h1>
+
+					<div class="tabs">
+						<ul class="tab-nav">
+							<li><a href="#tab01" class="active"></a></li>
+							<li><a href="#tab02"></a></li>
+							<li><a href="#tab03"></a></li>
+						</ul>
+
+						<div class="tab-content">
+							<div class="tab-common"></div>
+							<div class="tab-common"></div>
+							<div class="tab-common"></div>
+						</div>
+					</div>
+				 </div>
+			 </div>
+		</article>
 	</main>
 
 	<script>
@@ -66,15 +121,21 @@
 
 			header.removeAttribute('class');
 			header.classList.add( headerOldClass, headerClass );
+
 		}
 
 		const mainSlider = new Swiper('.swiper-container', {
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
 			slidesPerView: 1,
 			on: {
 				init: function(swiper) {
 					headerOldClass = header.className;
 
 					ChangeHeaderColor(swiper);
+
 				},
 
 				slideChange: function(swiper) {
