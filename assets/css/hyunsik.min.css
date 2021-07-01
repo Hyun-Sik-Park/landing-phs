@@ -170,4 +170,179 @@
   line-height: 49px;
   letter-spacing: 10px;
   color: #000;
+}
+#main .sec02 .sec02-inner .MainSideSlideWrap {
+  margin-top: 60px;
+}
+#main .sec03 {
+  background-color: #f1f1f1;
+}
+#main .sec04 .sec04-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px 0;
+}
+#main .sec04 .sec04-inner .thumbnail {
+  background: url("../image/sec04-thumb.jpg") no-repeat;
+  background-size: cover;
+  width: 397px;
+  height: 397px;
+}
+#main .sec04 .sec04-inner .info {
+  margin-left: 130px;
+}
+#main .sec04 .sec04-inner .info .infoList {
+  margin-bottom: 30px;
+}
+#main .sec04 .sec04-inner .info .infoList .title {
+  font-family: Noto Sans KR;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 10px;
+}
+#main .sec04 .sec04-inner .info .infoList input[type=text] {
+  width: 331px;
+  height: 40px;
+  border: 1px solid #ddd;
+}
+#main .sec04 .sec04-inner .info .infoList input[type=textarea] {
+  width: 452px;
+  height: 89px;
+  border: 1px solid #ddd;
+}
+#main .sec04 .sec04-inner .info .infoList input::-webkit-input-placeholder {
+  font-family: Noto Sans KR;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #aaa;
+  padding-left: 20px;
+}
+#main .sec04 .sec04-inner .info .infoList input::-moz-placeholder {
+  font-family: Noto Sans KR;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #aaa;
+  padding-left: 20px;
+}
+#main .sec04 .sec04-inner .info .infoList input:-ms-input-placeholder {
+  font-family: Noto Sans KR;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #aaa;
+  padding-left: 20px;
+}
+#main .sec04 .sec04-inner .info .infoList input::-ms-input-placeholder {
+  font-family: Noto Sans KR;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #aaa;
+  padding-left: 20px;
+}
+#main .sec04 .sec04-inner .info .infoList input::placeholder {
+  font-family: Noto Sans KR;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #aaa;
+  padding-left: 20px;
+}
+#main .sec04 .sec04-inner .info .infoList:nth-child(3) {
+  margin-bottom: 40px;
+}
+#main .sec04 .sec04-inner .info .btn {
+  text-align: right;
+}
+#main .sec04 .sec04-inner .info .btn button {
+  width: 200px;
+  height: 40px;
+  background-color: #3c59e5;
+}
+#main .sec04 .sec04-inner .info .btn button a {
+  font-family: Noto Sans KR;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #fff;
+}
+#main .sec04 .sec04-inner .info .btn button a i {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: #fff;
+}
+
+#footer {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #252525;
+}
+#footer .name {
+  font-family: Noto Sans KR;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: -0.005em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#footer .name span {
+  font-family: Noto Sans KR;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: -0.005em;
+  color: #fff;
+}
+#footer .copyright {
+  font-family: Noto Sans KR;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: #fff;
 }/*# sourceMappingURL=hyunsik.min.css.map */
