@@ -67,28 +67,24 @@
 					<h1 class="title">Project</h1>
 
 					<div class="MainSideSlideWrap">
-						<div class="mainSlide-wrap">
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide slide01"></div>
-									<div class="swiper-slide slide02"></div>
-									<div class="swiper-slide slide03"></div>
-								</div>
+						<div class="swiper-container mySwiper02">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide slide01"></div></a>
+								<div class="swiper-slide slide02"></div>
+								<div class="swiper-slide slide03"></div>
 							</div>
 						</div>
 
-						<div class="sideSlide-wrap">
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide slide01"></div>
-									<div class="swiper-slide slide02"></div>
-									<div class="swiper-slide slide03"></div>
-								</div>
+						<div class="swiper-container mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide slide01"></div>
+								<div class="swiper-slide slide02"></div>
+								<div class="swiper-slide slide03"></div>
 							</div>
+							<div class="swiper-button-next"></div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</article>
 
@@ -180,6 +176,29 @@
 				}
 			}
 		});
+
+		const swiper02 = new Swiper('.sec02 .mySwiper02', {
+			loop: true,
+			slidesPerView: 1
+		});
+
+		const swiper = new Swiper('.sec02 .mySwiper', {
+			loop: true,
+			slidesPerView: 2.5,
+			spaceBetween: 15,
+			freemode: true,
+			autoplay: {
+				delay: 2000,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+			},
+			thumbs: {
+				swiper: swiper02
+			}
+		});
+
+
 
 	</script>
 </body>
