@@ -210,11 +210,19 @@
   width: 331px;
   height: 40px;
   border: 1px solid #ddd;
+  padding-left: 20px;
+}
+#main .sec04 .sec04-inner .info .infoList input[type=text]:focus,
+#main .sec04 .sec04-inner .info .infoList input[type=textarea]:focus {
+  outline: 1px solid #aaa;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 #main .sec04 .sec04-inner .info .infoList input[type=textarea] {
   width: 452px;
   height: 89px;
   border: 1px solid #ddd;
+  padding-left: 20px;
 }
 #main .sec04 .sec04-inner .info .infoList input::-webkit-input-placeholder {
   font-family: Noto Sans KR;
@@ -225,7 +233,6 @@
   letter-spacing: 2px;
   text-align: left;
   color: #aaa;
-  padding-left: 20px;
 }
 #main .sec04 .sec04-inner .info .infoList input::-moz-placeholder {
   font-family: Noto Sans KR;
@@ -236,7 +243,6 @@
   letter-spacing: 2px;
   text-align: left;
   color: #aaa;
-  padding-left: 20px;
 }
 #main .sec04 .sec04-inner .info .infoList input:-ms-input-placeholder {
   font-family: Noto Sans KR;
@@ -247,7 +253,6 @@
   letter-spacing: 2px;
   text-align: left;
   color: #aaa;
-  padding-left: 20px;
 }
 #main .sec04 .sec04-inner .info .infoList input::-ms-input-placeholder {
   font-family: Noto Sans KR;
@@ -258,7 +263,6 @@
   letter-spacing: 2px;
   text-align: left;
   color: #aaa;
-  padding-left: 20px;
 }
 #main .sec04 .sec04-inner .info .infoList input::placeholder {
   font-family: Noto Sans KR;
@@ -269,7 +273,6 @@
   letter-spacing: 2px;
   text-align: left;
   color: #aaa;
-  padding-left: 20px;
 }
 #main .sec04 .sec04-inner .info .infoList:nth-child(3) {
   margin-bottom: 40px;
@@ -281,6 +284,8 @@
   width: 200px;
   height: 40px;
   background-color: #3c59e5;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 #main .sec04 .sec04-inner .info .btn button a {
   font-family: Noto Sans KR;
@@ -298,6 +303,11 @@
   letter-spacing: 2px;
   text-align: left;
   color: #fff;
+}
+#main .sec04 .sec04-inner .info .btn button:hover {
+  background-color: #3b53c4;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 #footer {

@@ -222,12 +222,20 @@
 						width: 331px;
 						height: 40px;
 						border: 1px solid #ddd;
+						padding-left: 20px;
+					}
+
+					input[type="text"]:focus,
+					input[type="textarea"]:focus {
+						outline: 1px solid #aaa;
+						transition: all ease 0.3s;
 					}
 
 					input[type="textarea"] {
 						width: 452px;
 						height: 89px;
 						border: 1px solid #ddd;
+						padding-left: 20px;
 					}
 
 					input::placeholder {
@@ -239,7 +247,7 @@
 						letter-spacing: 2px;
 						text-align: left;
 						color: #aaa;
-						padding-left: 20px;
+
 					}
 				}
 
@@ -254,6 +262,7 @@
 						width: 200px;
 						height: 40px;
 						background-color: #3c59e5;
+						transition: all ease 0.3s;
 
 						a {
 							font-family: Noto Sans KR;
@@ -273,6 +282,11 @@
 								color: #fff;
 							}
 						}
+					}
+
+					button:hover {
+						background-color: #3b53c4;
+						transition: all ease 0.3s;
 					}
 				}
 
