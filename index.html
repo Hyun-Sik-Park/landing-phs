@@ -95,15 +95,15 @@
 
 					<div class="tabs">
 						<ul class="tab-nav">
-							<li><a href="#tab01" class="active"></a></li>
-							<li><a href="#tab02"></a></li>
-							<li><a href="#tab03"></a></li>
+							<li><a href="javascript:void(0);" data-num="tab01" id="user_call01" class="active">Designer</a></li>
+							<li><a href="javascript:void(0);" data-num="tab02" id="user_call02">Back-end Developer</a></li>
+							<li><a href="javascript:void(0);" data-num="tab03" id="user_call03">Front-end Developer</a></li>
 						</ul>
 
 						<div class="tab-content">
-							<div class="tab-common"></div>
-							<div class="tab-common"></div>
-							<div class="tab-common"></div>
+							<div class="tab-common active"><ul class="user_list01"></ul></div>
+							<div class="tab-common"><ul class="user_list02"></ul></div>
+							<div class="tab-common"><ul class="user_list03"></ul></div>
 						</div>
 					</div>
 				 </div>
@@ -198,8 +198,176 @@
 			}
 		});
 
+		$('.tab-nav a').on('click', function(e) {
+			e.preventDefault();
+			var t = $(this);
+			var target = t.attr('data-num');
+
+			if( ! t.hasClass('active')) {
+				t.parent().siblings().find('a').removeClass('active');
+				t.addClass('active');
+
+				$('.tab-content .tab-common').removeClass('active');
+				$('.tab-content .' + target).addClass('active');
+			}
+		})
 
 
+		$('#user_call01').on('click',function(e){
+
+			$.ajax({
+
+				url: 'https://randomuser.me/api/',
+
+				data: {
+					results: 3,
+					gender: 'female'
+				},
+
+				dataType: 'json',
+
+				success: function(data) {
+					var user = data.results[0];
+
+					console.log(data);
+					// console.log(user);
+
+					var output = '';
+
+					for(var i = 0; i < 3; i++) {
+						output +=	'<li>'
+						output +=	'	<div class="item">'
+						output +=	'		<div class="item-thumb">'
+						output +=	'			<img src="'+data.results[i].picture.large+'" alt="프사">'
+						output +=	'		</div>'
+						output +=	'		<div class="item-data">'
+						output +=	'			<div class="name">'+data.results[i].name.first+'</div>'
+						if( i == 0){
+							output +=	'<div class="role">Lead Designer</div>'
+						}else if( i == 1){
+							output +=	'<div class="role">Senior Designer</div>'
+						}else {
+							output +=	'<div class="role">Junior Designer</div>'
+						}
+						output +=	'			<div class="icons">'
+						output +=	'				<div class="email"><i class="far fa-envelope"></i></div>'
+						output +=	'				<div class="phone"><i class="fas fa-phone"></i></div>'
+						if( user.gender == 'male') {
+							output +=	'<div class="gender"><i class="fas fa-mars"></i></div>'
+						}
+						else if( user.gender == 'female') {
+							output +=	'<div class="gender"><i class="fas fa-venus"></i></div>'
+						}
+						output +=	'			</div>'
+						output +=	'		</div>'
+						output +=	'	</div>'
+						output +=	'</li>'
+						output +=    '<div class="line"></div>'
+						$('.user_list01').html(output);
+					}
+				}
+			})
+		});
+		$('#user_call02').on('click',function(e){
+
+				$.ajax({
+
+					url: 'https://randomuser.me/api/',
+
+					data: {
+						results: 3
+					},
+
+					dataType: 'json',
+
+					success: function(data) {
+
+						var output = '';
+						for(var i = 0; i < 3; i++){
+							output +=	'<li>'
+							output +=	'	<div class="item">'
+							output +=	'		<div class="item-thumb">'
+							output +=	'			<img src="'+data.results[i].picture.large+'" alt="프사">'
+							output +=	'		</div>'
+							output +=	'		<div class="item-data">'
+							output +=	'			<div class="name">'+data.results[i].name.first+'</div>'
+							if( i == 0 ) {
+								output +=	'<div class="role">Lead Backend developer</div>'
+							}else if( i == 1) {
+								output +=	'<div class="role">Senior Backend developer</div>'
+							}else {
+								output +=	'<div class="role">Junior Backend developer</div>'
+							}
+							output +=	'			<div class="icons">'
+							output +=	'				<div class="email"><i class="far fa-envelope"></i></div>'
+							output +=	'				<div class="phone"><i class="fas fa-phone"></i></div>'
+							if( data.results[i].gender == 'male') {
+								output +=	'<div class="gender"><i class="fas fa-mars"></i></div>'
+							}
+							else if( data.results[i].gender == 'female') {
+								output +=	'<div class="gender"><i class="fas fa-venus"></i></div>'
+							}
+							output +=	'			</div>'
+							output +=	'		</div>'
+							output +=	'	</div>'
+							output +=	'</li>'
+							output +=    '<div class="line"></div>'
+
+							$('.user_list01').html(output);
+						}
+					}
+				})
+			});
+		$('#user_call03').on('click',function(e){
+
+			$.ajax({
+
+				url: 'https://randomuser.me/api/',
+
+				data: {
+					results: 3
+				},
+
+				dataType: 'json',
+
+				success: function(data) {
+
+					var output = '';
+					for(var i = 0; i < 3; i++){
+						output +=	'<li>'
+						output +=	'	<div class="item">'
+						output +=	'		<div class="item-thumb">'
+						output +=	'			<img src="'+data.results[i].picture.large+'" alt="프사">'
+						output +=	'		</div>'
+						output +=	'		<div class="item-data">'
+						output +=	'			<div class="name">'+data.results[i].name.first+'</div>'
+						if( i == 0) {
+							output +=	'<div class="role">Lead Frontend developer</div>'
+						}else if( i == 1) {
+							output +=	'<div class="role">Senior Frontend developer</div>'
+						}else {
+							output +=	'<div class="role">Junior Frontend developer</div>'
+						}
+						output +=	'			<div class="icons">'
+						output +=	'				<div class="email"><i class="far fa-envelope"></i></div>'
+						output +=	'				<div class="phone"><i class="fas fa-phone"></i></div>'
+						if( data.results[i].gender == 'male') {
+							output +=	'<div class="gender"><i class="fas fa-mars"></i></div>'
+						}
+						else if( data.results[i].gender == 'female') {
+							output +=	'<div class="gender"><i class="fas fa-venus"></i></div>'
+						}
+						output +=	'			</div>'
+						output +=	'		</div>'
+						output +=	'	</div>'
+						output +=	'</li>'
+						output +=    '<div class="line"></div>'
+
+						$('.user_list01').html(output);
+					}
+				}
+			})
+		});
 	</script>
 </body>
 </html>
