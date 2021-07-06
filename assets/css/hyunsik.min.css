@@ -189,6 +189,7 @@
   background-size: contain !important;
   width: 397px;
   height: 320px;
+  cursor: pointer;
 }
 #main .sec02 .sec02-inner .MainSideSlideWrap .mySwiper02 .slide01 {
   background: url("../image/sec02-m2-slide01.png") no-repeat;
@@ -284,7 +285,7 @@
 }
 #main .sec03 .sec03-inner .tabs .tab-nav li a.active {
   background-color: #fafafa;
-  font-weight: 800;
+  font-weight: 400;
 }
 #main .sec03 .sec03-inner .tabs .tab-nav li:nth-child(2n) {
   border-top: 1px solid #ddd;
@@ -354,7 +355,7 @@
   border: 0.5px solid #ddd;
   margin-top: 100px;
 }
-#main .sec03 .sec03-inner .tabs .tab-content ul .line:nth-child(3n) {
+#main .sec03 .sec03-inner .tabs .tab-content ul .line:last-child {
   display: none;
 }
 #main .sec04 .sec04-inner {

@@ -184,6 +184,7 @@
 						background-size: contain !important;
 						width: 397px;
 						height: 320px;
+						cursor: pointer;
 					}
 
 					.slide01 {
@@ -293,7 +294,7 @@
 
 							&.active {
 								background-color: #fafafa;
-								font-weight: 800;
+								font-weight: 400;
 							}
 						}
 					}
@@ -381,7 +382,7 @@
 							margin-top: 100px;
 						}
 
-						.line:nth-child(3n) {
+						.line:last-child {
 							display: none;
 						}
 					}

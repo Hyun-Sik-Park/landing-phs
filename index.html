@@ -13,7 +13,7 @@
 	<!-- vendor -->
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 	<script src="https://kit.fontawesome.com/61b5fbd6cd.js" crossorigin="anonymous"></script>
 
 	<!-- fonts -->
@@ -69,9 +69,9 @@
 					<div class="MainSideSlideWrap">
 						<div class="swiper-container mySwiper02">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide slide01"></div></a>
-								<div class="swiper-slide slide02"></div>
-								<div class="swiper-slide slide03"></div>
+								<div class="swiper-slide slide01"><a href="https://tistory.com" target="_blank" style="display:block; width: 100%; height: 100%;"></a></div>
+								<div class="swiper-slide slide02"><a href="https://naver.com" target="_blank" style="display:block; width: 100%; height: 100%;"></a></div>
+								<div class="swiper-slide slide03"><a href="https://tistory.com" target="_blank" style="display:block; width: 100%; height: 100%;"></a></div>
 							</div>
 						</div>
 
@@ -101,9 +101,7 @@
 						</ul>
 
 						<div class="tab-content">
-							<div class="tab-common active"><ul class="user_list01"></ul></div>
-							<div class="tab-common"><ul class="user_list02"></ul></div>
-							<div class="tab-common"><ul class="user_list03"></ul></div>
+							<div class="tab-common active"><ul class="user_list"></ul></div>
 						</div>
 					</div>
 				 </div>
@@ -252,18 +250,13 @@
 						output +=	'			<div class="icons">'
 						output +=	'				<div class="email"><i class="far fa-envelope"></i></div>'
 						output +=	'				<div class="phone"><i class="fas fa-phone"></i></div>'
-						if( user.gender == 'male') {
-							output +=	'<div class="gender"><i class="fas fa-mars"></i></div>'
-						}
-						else if( user.gender == 'female') {
-							output +=	'<div class="gender"><i class="fas fa-venus"></i></div>'
-						}
+						output +=	'				<div class="gender"><i class="fas fa-venus"></i></div>'
 						output +=	'			</div>'
 						output +=	'		</div>'
 						output +=	'	</div>'
 						output +=	'</li>'
 						output +=    '<div class="line"></div>'
-						$('.user_list01').html(output);
+						$('.user_list').html(output);
 					}
 				}
 			})
@@ -275,7 +268,7 @@
 					url: 'https://randomuser.me/api/',
 
 					data: {
-						results: 3
+						results: 2
 					},
 
 					dataType: 'json',
@@ -283,7 +276,7 @@
 					success: function(data) {
 
 						var output = '';
-						for(var i = 0; i < 3; i++){
+						for(var i = 0; i < 2; i++){
 							output +=	'<li>'
 							output +=	'	<div class="item">'
 							output +=	'		<div class="item-thumb">'
@@ -292,11 +285,9 @@
 							output +=	'		<div class="item-data">'
 							output +=	'			<div class="name">'+data.results[i].name.first+'</div>'
 							if( i == 0 ) {
-								output +=	'<div class="role">Lead Backend developer</div>'
-							}else if( i == 1) {
-								output +=	'<div class="role">Senior Backend developer</div>'
+								output +=	'<div class="role">Senior developer</div>'
 							}else {
-								output +=	'<div class="role">Junior Backend developer</div>'
+								output +=	'<div class="role">Junior developer</div>'
 							}
 							output +=	'			<div class="icons">'
 							output +=	'				<div class="email"><i class="far fa-envelope"></i></div>'
@@ -313,7 +304,7 @@
 							output +=	'</li>'
 							output +=    '<div class="line"></div>'
 
-							$('.user_list01').html(output);
+							$('.user_list').html(output);
 						}
 					}
 				})
@@ -324,37 +315,27 @@
 
 				url: 'https://randomuser.me/api/',
 
-				data: {
-					results: 3
-				},
-
 				dataType: 'json',
 
 				success: function(data) {
 
 					var output = '';
-					for(var i = 0; i < 3; i++){
+
 						output +=	'<li>'
 						output +=	'	<div class="item">'
 						output +=	'		<div class="item-thumb">'
-						output +=	'			<img src="'+data.results[i].picture.large+'" alt="프사">'
+						output +=	'			<img src="'+data.results[0].picture.large+'" alt="프사">'
 						output +=	'		</div>'
 						output +=	'		<div class="item-data">'
-						output +=	'			<div class="name">'+data.results[i].name.first+'</div>'
-						if( i == 0) {
-							output +=	'<div class="role">Lead Frontend developer</div>'
-						}else if( i == 1) {
-							output +=	'<div class="role">Senior Frontend developer</div>'
-						}else {
-							output +=	'<div class="role">Junior Frontend developer</div>'
-						}
+						output +=	'			<div class="name">'+data.results[0].name.first+'</div>'
+						output +=	'			<div class="role">Front-end developer</div>'
 						output +=	'			<div class="icons">'
 						output +=	'				<div class="email"><i class="far fa-envelope"></i></div>'
 						output +=	'				<div class="phone"><i class="fas fa-phone"></i></div>'
-						if( data.results[i].gender == 'male') {
+						if( data.results[0].gender == 'male') {
 							output +=	'<div class="gender"><i class="fas fa-mars"></i></div>'
 						}
-						else if( data.results[i].gender == 'female') {
+						else if( data.results[0].gender == 'female') {
 							output +=	'<div class="gender"><i class="fas fa-venus"></i></div>'
 						}
 						output +=	'			</div>'
@@ -363,8 +344,8 @@
 						output +=	'</li>'
 						output +=    '<div class="line"></div>'
 
-						$('.user_list01').html(output);
-					}
+						$('.user_list').html(output);
+
 				}
 			})
 		});
