@@ -64,7 +64,7 @@
 		}
 
 		.first  {
-			background: url('../image/slide01.jpg') no-repeat;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url('../image/slide01.jpg');
 			background-size: cover;
 			display: flex;
 			align-items: center;
@@ -422,7 +422,8 @@
 						margin-bottom: 10px;
 					}
 
-					input[type="text"] {
+					input[type="text"],
+					input[type="email"] {
 						width: 331px;
 						height: 40px;
 						border: 1px solid #ddd;
@@ -430,6 +431,7 @@
 					}
 
 					input[type="text"]:focus,
+					input[type="email"]:focus,
 					input[type="textarea"]:focus {
 						outline: 1px solid #aaa;
 						transition: all ease 0.3s;
@@ -468,24 +470,23 @@
 						background-color: #3c59e5;
 						transition: all ease 0.3s;
 
-						a {
-							font-family: Noto Sans KR;
+						font-family: Noto Sans KR;
+						font-size: 13px;
+						font-weight: 300;
+						line-height: 19px;
+						letter-spacing: 2px;
+						text-align: center;
+						color: #fff;
+
+						i {
 							font-size: 13px;
-							font-weight: 300;
-							line-height: 19px;
+							font-weight: 400;
+							line-height: 15px;
 							letter-spacing: 2px;
 							text-align: left;
 							color: #fff;
-
-							i {
-								font-size: 13px;
-								font-weight: 400;
-								line-height: 15px;
-								letter-spacing: 2px;
-								text-align: left;
-								color: #fff;
-							}
 						}
+
 					}
 
 					button:hover {

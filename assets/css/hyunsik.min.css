@@ -57,7 +57,8 @@
   height: 80vh;
 }
 #main .sec01 .first {
-  background: url("../image/slide01.jpg") no-repeat;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../image/slide01.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../image/slide01.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,13 +388,15 @@
   color: #000;
   margin-bottom: 10px;
 }
-#main .sec04 .sec04-inner .info .infoList input[type=text] {
+#main .sec04 .sec04-inner .info .infoList input[type=text],
+#main .sec04 .sec04-inner .info .infoList input[type=email] {
   width: 331px;
   height: 40px;
   border: 1px solid #ddd;
   padding-left: 20px;
 }
 #main .sec04 .sec04-inner .info .infoList input[type=text]:focus,
+#main .sec04 .sec04-inner .info .infoList input[type=email]:focus,
 #main .sec04 .sec04-inner .info .infoList input[type=textarea]:focus {
   outline: 1px solid #aaa;
   -webkit-transition: all ease 0.3s;
@@ -467,17 +470,15 @@
   background-color: #3c59e5;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
-}
-#main .sec04 .sec04-inner .info .btn button a {
   font-family: Noto Sans KR;
   font-size: 13px;
   font-weight: 300;
   line-height: 19px;
   letter-spacing: 2px;
-  text-align: left;
+  text-align: center;
   color: #fff;
 }
-#main .sec04 .sec04-inner .info .btn button a i {
+#main .sec04 .sec04-inner .info .btn button i {
   font-size: 13px;
   font-weight: 400;
   line-height: 15px;
