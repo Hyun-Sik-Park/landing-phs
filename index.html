@@ -27,6 +27,7 @@
 			<div id="header-inner">
 				<h3 class="name">Park-Hyun-Sik</h3>
 				<ul class="headerList">
+					<li>Banner</li>
 					<li>Project</li>
 					<li>Team</li>
 					<li>Contact Us</li>
@@ -36,7 +37,8 @@
 	</header>
 
 	<main id="main">
-		<div class="sec01">
+		<!-- 섹션 1. 자기소개 배너 넣을 것 -->
+		<article class="sec01">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide first" data-header-type="white">
@@ -59,8 +61,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</article>
 
+		<!-- 섹션 2. 여태해왔던 프로젝트 로고 탭&슬라이드 넣을 것 -->
 		<article class="sec02">
 			<div class="container">
 				<div class="sec02-inner">
@@ -88,6 +91,7 @@
 			</div>
 		</article>
 
+		<!-- 섹션 3. 랜덤 API -> 디자인 수정할것  -->
 		<article class="sec03">
 			 <div class="container">
 				 <div class="sec03-inner">
@@ -108,10 +112,14 @@
 			 </div>
 		</article>
 
+		<!-- 섹션 4. 지도 API로 내 위치(왼쪽), 메일(오른쪽) 넣을 것 -->
 		<article class="sec04">
 			<div class="container">
+				<h2>Contact Us</h2>
 				<div class="sec04-inner">
-					<div class="thumbnail"></div>
+					<a href="https://map.kakao.com/?urlX=532235&urlY=1204730&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank">
+						<img width="504" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=532235&MY=1204730&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc">
+					</a>
 					<div class="info">
 						<form onsubmit="return sendRequest(this);">
 							<div class="infoList">
@@ -137,12 +145,13 @@
 
 		</article>
 
+		<!-- 섹션 5. 푸터 -> 저작권 넣을것 -->
 		<footer id="footer">
 				<div class="name">ⓒ 2021 <span>Park Hyun Sik</span></div>
 				<div class="copyright">jQuery, Swiper, Font Awesome 5, Random User Generator, Unsplash, Website Vectors by Vecteezy</div>
 		</footer>
 	</main>
-
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
 	<script>
 		const header = document.querySelector('#header');
 		let headerOldClass;
@@ -402,6 +411,17 @@
 				}
 			})
 		});
+
+		// 지도 API
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+
+
 	</script>
 </body>
 </html>
