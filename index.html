@@ -115,7 +115,7 @@
 		<!-- 섹션 4. 지도 API로 내 위치(왼쪽), 메일(오른쪽) 넣을 것 -->
 		<article class="sec04">
 			<div class="container">
-				<h2>Contact Us</h2>
+				<h1 class="title">Contact Us</h2>
 				<div class="sec04-inner">
 					<a href="https://map.kakao.com/?urlX=532235&urlY=1204730&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false" target="_blank">
 						<img width="504" height="310" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=2.5&MX=532235&MY=1204730&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc">
@@ -124,15 +124,15 @@
 						<form onsubmit="return sendRequest(this);">
 							<div class="infoList">
 								<div class="title">Company or Your-name</div>
-								<input type="text" placeholder="Company or Your-name">
+								<input type="text" name="name" placeholder="Company or Your-name">
 							</div>
 							<div class="infoList">
 								<div class="title">Email</div>
-								<input type="email" placeholder="phs9595@naver.com">
+								<input type="email" name="email" placeholder="phs9595@naver.com">
 							</div>
 							<div class="infoList">
 								<div class="title">Messages</div>
-								<input type="textarea" placeholder="Please enter your request.">
+								<input type="textarea" name="message" placeholder="Please enter your request.">
 							</div>
 							<div class="btn">
 								<button>Send Request <i class="far fa-paper-plane"></i></button>
@@ -145,13 +145,15 @@
 
 		</article>
 
+
 		<!-- 섹션 5. 푸터 -> 저작권 넣을것 -->
 		<footer id="footer">
 				<div class="name">ⓒ 2021 <span>Park Hyun Sik</span></div>
 				<div class="copyright">jQuery, Swiper, Font Awesome 5, Random User Generator, Unsplash, Website Vectors by Vecteezy</div>
 		</footer>
 	</main>
-	<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+	<!-- <script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script> -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 	<script>
 		const header = document.querySelector('#header');
 		let headerOldClass;
@@ -413,13 +415,45 @@
 		});
 
 		// 지도 API
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
-		};
+		// var container = document.getElementById('map');
+		// var options = {
+		// 	center: new kakao.maps.LatLng(33.450701, 126.570667),
+		// 	level: 3
+		// };
 
-		var map = new kakao.maps.Map(container, options);
+		// var map = new kakao.maps.Map(container, options);
+
+
+		// 메일 전송 api
+		(function() {
+		emailjs.init("user_bVA3NECXA7lGyoOOujneO");
+		})();
+
+		$(document).ready(function() {
+
+		emailjs.init("user_bVA3NECXA7lGyoOOujneO");
+        //"user_xxxxx"이 부분은 사용자마다 다르니 반드시 emailJS의 installation 화면을 확인
+        $('button').click(function(){
+
+			var templateParams = {
+					//각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+						name: $('input[name=name]').val(),
+						email : $('input[name=email]').val(),
+						message : $('input[name=message]').val()
+					};
+
+
+					emailjs.send('service_ia9d8vb', 'template_n9jyvjo', templateParams)
+					//emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+							.then(function(response) {
+							console.log('SUCCESS!', response.status, response.text);
+							}, function(error) {
+							console.log('FAILED...', error);
+					});
+
+			});
+
+		});
 
 
 	</script>
